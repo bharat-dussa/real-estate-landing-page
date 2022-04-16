@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   const content=<span>We are working hard to build an investment product around our co-owners&rsquo; wants and desires. Answer a few short questions and get early access to our innovative, <br id={'break'}/>trust-worthy, and legally solid tools to invest in real estate.</span>
-  const link='https://docs.google.com/forms/d/1T53JIZNw5CQRxPn-z52B-nWJlBArOh1NmjUE5N_6ttI/viewform?edit_requested=true'
+  const link='https://test-form.com'
   
   return (
     <div>
