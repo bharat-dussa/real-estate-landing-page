@@ -137,18 +137,9 @@ function Footer() {
         <ul>
           <li>
             <p>
-              Trezo.in is a website operated by Theek Property Management
-              Private Limited (“Theek”) and by accessing the website and any
+              Trezo.in is a website operated by ABC Pvt Ltd and by accessing the website and any
               pages thereof, you agree to be bound by its terms of service and
-              privacy policy. Theek does not prima facie endorse or promote any
-              of the opportunities that appear on this website nor make any
-              recommendations regarding same to any Investor. Prospective
-              investors are not to construe anything on the website as
-              investment, business, legal or tax advice and the content
-              contained herein does not constitute an offer by Theek to sell
-              securities. Any information made available from our website or
-              links to websites, do not represent a solicitation of an offer to
-              buy or sell any property. It also does not constitute an offer to
+              privacy policy. It also does not constitute an offer to
               provide investment advice, service or assistance on particular
               investment or transaction. Direct and indirect purchase of real
               property involves significant risk and investments may lose value
@@ -162,7 +153,7 @@ function Footer() {
             </p>
           </li>
           <li>
-            <p> © Theek Property Management Technologies Pvt Ltd, 2020. </p>
+            <p> © ABC Pvt Ltd. </p>
           </li>
           <li className={"flex"}>
             <div className={"love-container"}>
