@@ -2,7 +2,8 @@ import React from 'react'
 import { Banner, Navbar } from '../../../styled/Header'
 import { Button } from '../../../styled/Button'
 
-function index ({buttontext,link}) {
+function Header ({buttontext,link, scrollTo}) {
+
   return (
     <Banner className={'banner-image'}>
       <Navbar>
@@ -22,7 +23,7 @@ function index ({buttontext,link}) {
           Trezo enables you to buy <br id={'break-1'}/>loan-free fractions of <br id={'break-2'}/>income-generating
            properties with friends and like-minded co-owners
         </p>
-        <button className='banner-btn'>
+        <button className='banner-btn' onClick={scrollTo}>
           <img src='assests/components/down-arrow.svg' alt='down arrow' />
         </button>
         {/* <Button className={'mobile-btn'}>{buttontext}</Button> */}
@@ -33,4 +34,4 @@ function index ({buttontext,link}) {
 }
 
 // const Bannerdetails = styled.div``;
-export default index
+export default Header

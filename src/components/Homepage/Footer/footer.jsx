@@ -1,11 +1,11 @@
 // import Link from 'next/link'
 import React from "react";
-import { Footer } from "../../../styled/Footer";
+import { FooterStyled } from "../../../styled/Footer";
 
-function index() {
+function Footer() {
   const location = `https://www.google.com/maps/place/Invento+Coworking+Office+Dwarka/@28.5963168,77.0393278,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1b41ab2b4b27:0xdf70632e3b3ccc41!8m2!3d28.5963121!4d77.0415165`;
   return (
-    <Footer>
+    <FooterStyled>
       <div className="col">
         <div>
           <ul className="footer-main-links">
@@ -124,7 +124,10 @@ function index() {
               <a href="whatsapp://send?text=Hi,Trezo Team, would you like to discuss ? &phone=+919310478032">
                 Whatsapp Us
               </a>
-              <img src="assests/components/footer/footer-right-arrow.svg" alt={'right-arrow'}/>
+              <img
+                src="assests/components/footer/footer-right-arrow.svg"
+                alt={"right-arrow"}
+              />
             </div>
           </li>
         </ul>
@@ -174,8 +177,8 @@ function index() {
           </li>
         </ul>
       </div>
-    </Footer>
+    </FooterStyled>
   );
 }
 
-export default index;
+export default Footer;

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Card = styled('section')`
+export const CardStyled = styled('section')`
   background:#eee9e8;
   /* height: 760px; */
   /* padding:0px 10px 0px 10px; */

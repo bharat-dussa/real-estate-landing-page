@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Footer = styled("footer")`
+export const FooterStyled = styled("footer")`
   padding: 28px 20px 0px 6px;
   line-height: 14px;
   display: flex;
