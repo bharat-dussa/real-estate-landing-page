@@ -1,0 +1,35 @@
+name: Upload Website
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+    - run: npm install
+    - run: npm run build
+      env:
+        CI: ""
+    - uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --follow-symlinks --delete --exact-timestamps
+      env:
+        AWS_S3_BUCKET: trezo.in
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'ap-south-1'   # optional: defaults to us-east-1
+        SOURCE_DIR: 'build'      # optional: defaults to entire repository
+    - name: Purge cache
+      uses: nathanvaughn/actions-cloudflare-purge@master
+      if: success()
+      env:
+        CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+        CLOUDFLARE_AUTH_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
